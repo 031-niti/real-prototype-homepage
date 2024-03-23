@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { navItem } from "../ui/Items";
+import Image from "next/image";
 const Navbar = () => {
   return (
     <nav className="fixed  top-0 w-screen z-50 bg-white">
@@ -13,8 +14,7 @@ const Navbar = () => {
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
+                stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -25,14 +25,13 @@ const Navbar = () => {
             </div>
             <div
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 flex flex-col space-y-4"
-            >
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 flex flex-col space-y-4">
               {navItem}
             </div>
           </div>
           <Link href={"/"}>
             <button type="button">
-              <img
+              <Image
                 src="https://cqphjwakpkovcvrouaoz.supabase.co/storage/v1/object/public/Images/Logo/Screenshot%20from%202024-02-13%2016-07-12.png"
                 alt="TechVibe"
                 width={50}
@@ -50,17 +49,15 @@ const Navbar = () => {
         <div className="flex justify-center items-center h-full">
           <button className="h-full flex justify-center items-center mr-7">
             <Link
-              href={"/"}
-              className="bg-white text-[13px] lg:text-lg h-full w-full flex justify-center items-center"
-            >
+              href={"/SignIn"}
+              className="bg-white text-[13px] lg:text-lg h-full w-full flex justify-center items-center">
               Login
             </Link>
           </button>
           <button className="bg-[#952124] h-full  flex justify-center items-center">
             <Link
-              href={"/"}
-              className=" text-white pl-7 pr-7 text-[13px] lg:text-lg w-full h-full flex justify-center items-center"
-            >
+              href={"/SignUp"}
+              className=" text-white pl-7 pr-7 text-[13px] lg:text-lg w-full h-full flex justify-center items-center">
               get started
             </Link>
           </button>
