@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Lora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "../styles/globals.css";
 
-export const lora = Lora({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lora.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
